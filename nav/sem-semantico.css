@@ -1,0 +1,21 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar{
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar .nav-item{
+    padding: 14px 20px;
+    float: left;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navbar .nav-item:hover{
+    background-color: #575757;
+}

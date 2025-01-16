@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.container{
+    width: 100%;
+}
+
+.sidebar-esquerda,
+.sidebar-direita {
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}
+
+.sidebar-esquerda ul,
+.sidebar-direita ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-esquerda ul li,
+.sidebar-direita ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.sidebar-esquerda ul li:hover,
+.sidebar-direita ul li:hover {
+    background-color: #575757;
+}
+
+.hidden-items {
+    display: none;
+}
+
+.toggle-button{
+    background-color: #444;
+    border: none;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.toggle-button:hover{
+    background-color: #575757;
+}
+
+.sidebar-direita ul ul{
+    list-style-type: none;
+    padding-left: 16px;
+    max-height: 0px;
+    overflow: hidden;
+}
+
+.sidebar-direita ul li:hover > ul{
+    max-height: 500px;
+}
+
+.sidebar-direita ul ul li:hover{
+    background-color: #666;
+}
+
+.container{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	animation: gradient 15s ease infinite;
+	background-size: 400% 400%;
+}
+
+.container h1{
+    text-align: center;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
