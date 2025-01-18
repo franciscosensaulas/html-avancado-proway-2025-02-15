@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com acessibilidade</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <header>
+        <h1>Portal com acessibilidade</h1>
+        <nav>
+            <ul aria-label="Navegação principal">
+                <li>
+                    <a href="#sobre-nos">Sobre nós</a>
+                </li>
+                <li>
+                    <a href="#atributos">Atributos ARIA</a>
+                </li>
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre-nos">
+            <h2>Sobre</h2>
+            <p>Este conteúdo é sobre como usar os atributos ARIA para tornar os sites mais acessíveis</p>
+            <button id="open-modal" aria-haspopup="dialog" aria-controls="modal">Abrir Modal</button>
+        </section>
+
+        <section id="atributos" class="aria-list">
+            <h2>Atributos ARIA</h2>
+            <p>
+                <span class="negrito">O que é ARIA?</span> ARIA (Acessible RICH Internet Applications) é uma especificação que define como tornar a web mais acessível para pessoas com deficiências. Ele fornece atributos adicionais para tornar a interação com elementos da página mais clara para tecnologias assistivas. O uso correto de ARIA melhora a navegação, facilita a compreensão de conteúdo dinâmico e contribui para uma experiência mais inclusiva na web.
+            </p>
+            <ul>
+                <li>
+                    <code>aria-label:</code>
+                    <span>Define um rótulo acessível para um elemento, útil quando o texto visível não é suficiente</span>
+                </li>
+                <li>
+                    <code>aria-hidden:</code>
+                    <span>Esconde um elemento da árvore acessível, informando aos leitores de tela para ignorá-lo.</span>
+                </li>
+                <li>
+                    <code>aria-required:</code>
+                    <span>Marca um campo de form como obrigatório, permitindo leitores de tela avisem aos usuários</span>
+                </li>
+                <li>
+                    <code>aria-expanded:</code>
+                    <span>Indica o estado de expansão de um menu ou painel (true ou false)</span>
+                </li>
+                <li>
+                    <code>aria-disabled:</code>
+                    <span>Indica que um elemento é desabilitado e não pode ser interagido.</span>
+                </li>
+                <li>
+                    <code>aria-describedby:</code>
+                    <span>Relaciona um elemento a um texto explicativo, geralmente usado para fornecer mais contexto para usuários de leitores de tela.</span>
+                </li>
+                <li>
+                    <code>aria-pressed:</code>
+                    <span>Informa se um botão ou controle de alternância está pressionado ou não.</span>
+                </li>
+                <li>
+                    <code>aria-live:</code>
+                    <span>Informa a prioridade de atualização dinâmica de uma região de conteúdo (exemplo: chat em tempo real.)</span>
+                </li>
+                <li>
+                    <code>aria-current:</code>
+                    <span>Indica o item atual em uma lista ou navegação (exemplo: link ativo em um menu).</span>
+                </li>
+                <li>
+                    <code>aria-haspopup:</code>
+                    <span>Indica que um botão ou elemento pode abrir uma janela ou menu (exemplo: dropdow).</span>
+                </li>
+                <li>
+                    <code>role:</code>
+                    <span>o papel de um elemento na interface, como "dialog", "button", "navigation"</span>
+                </li>
+                <li>
+                    <code>aria-controls:</code>
+                    <span>Relaciona um elemento a outro que ele controla (como um botão que abre uma modal)</span>
+                </li>
+                <li>
+                    <code>aria-labelledby:</code>
+                    <span>Relaciona um elemento a outro que o descreve, geralmente utilizado em conjunto com títulos e descrições.</span>
+                </li>
+            </ul>
+        </section>
+
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <form action="https://localhost:5000/contato.php" aria-labelledby="form-title">
+                <h3 id="form-title" class="hidden">Formulário de contato</h3>
+                <label for="name">Nome: </label>
+                <input type="text" id="name" name="name" aria-required="true" aria-describedby="name-help" required>
+                <span id="name-help" class="hidden">Digite seu nome completo.</span>
+
+                <label for="email">E-mail: </label>
+                <input type="email" id="email" name="email" aria-required="true" aria-describedby="email-help" required>
+                <span id="email-help" class="hidden">Digite seu e-mail</span>
+
+                <div class="botao-salvar">
+
+                    <button type="submit" aria-pressed="false">Enviar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <div id="modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <h2 id="modal-title">Título da Modal</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur laborum eveniet nesciunt blanditiis tempore totam magni fugiat impedit corrupti similique ratione sed, iste esse voluptates? Eos provident suscipit iure ratione.</p>
+            <button id="close-modal" aria-label="Fechar modal">Fechar</button>
+        </div>
+    </div>
+    <script src="scripts/index.js"></script>
+</body>
+</html>

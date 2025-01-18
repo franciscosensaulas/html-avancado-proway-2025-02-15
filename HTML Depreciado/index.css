@@ -1,0 +1,59 @@
+.centralizado {
+    text-align: center;
+}
+
+.titulo-realce {
+    color: #0000ff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22;
+}
+
+.negrito {
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+table,
+tr,
+td,
+th {
+    border: 1px black solid;
+}
+
+table thead tr {
+    background-color: #0000ff;
+}
+
+th:nth-child(1) {
+    width: 100px;
+}
+
+th:nth-child(2) {
+    width: 200px;
+}
+
+th:nth-child(1):hover,
+th:nth-child(2):hover {
+    background-color: #00ffff;
+}
+
+/* Trocar a cor de fundo das linhas pares */
+tbody tr:nth-child(even) {
+    background-color: #add8e6;
+}
+
+/* Trocar a cor de fundo das linhas ímpares */
+tbody tr:nth-child(odd) {
+    background-color: #87cefa;
+}
+
+.flex{
+    display: flex;
+}
+
+img {
+    height: 200px;
+}
